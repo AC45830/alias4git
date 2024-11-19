@@ -10,8 +10,9 @@
    ![Alt text](image_gitconfigpaths.png)
 3. Update contents of your global .gitconfig (google for its path on your machine!) to below - 
 ```
+# replace file paths below with matching filepaths from cloned alias4git repository
 [include]
-   path = <path\\to\\alias4git\\alias.gitconfig>
+   path = <path\\to\\alias4git\\alias.gitconfig> 	# make sure to remove '<' and '>'
 
 [alias]
 	cfg = !git config --file <path\\\\to\\\\alias4git\\\\alias.gitconfig>
