@@ -6,9 +6,12 @@
    ```
    git clone https://github.com/pipelineinc/alias4git.git
    ```
-2. Locate global .gitconfig file location - 
+2. Locate global .gitconfig file location on your machine -
+
+   Default on windows machine is home directory ( %USERPROFILE% )
+      
    ![Alt text](image_gitconfigpaths.png)
-3. Update contents of your global .gitconfig (google for its path on your machine!) to below - 
+4. Update contents of your global .gitconfig to below - 
 ```
 # replace file paths below with matching filepaths from cloned alias4git repository
 [include]
