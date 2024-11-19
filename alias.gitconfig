@@ -35,6 +35,15 @@
         lastpull = !ls -ll .git/FETCH_HEAD
 	hi = "!f() { echo 'Hello, ' $1; }; f"
 	share = "!commitAndPushAlias() { cd c:\\\\gtl\\\\alias4git; git add alias.gitconfig; git commit; }; commitAndPushAlias"
+
+	# from https://github.com/Lior-Katz
+	nccommit = commit --allow-empty-message -m \"\"
+	gcl = config --global -l
+	last = log -1 HEAD --stat
+	vimdiff = difftool -t vimdiff -y
+	diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+	unstage = restore --staged
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	
 [gitflow "branch"]
 	master = main
