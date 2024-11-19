@@ -26,9 +26,9 @@
 	
 
 	compare = rev-list --count --left-right
-	cmdlist = !git cfg -l | grep 'alias'
-	list = !git cfg -l | grep 'alias'
-	cfglist = !git cfg -l | grep 'alias'
+	cmdlist = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	list = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	cfglist = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	
 	
 	ts = !ls -ll .git/FETCH_HEAD
