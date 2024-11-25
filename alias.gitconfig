@@ -34,9 +34,9 @@
 	ts = !ls -ll .git/FETCH_HEAD
         lastpull = !ls -ll .git/FETCH_HEAD
 	all = add .
-+       ds = diff --stat
-+       untracked = !git ls-files --others
-+       exuntracked = !git ls-files --others --exclude-standard
+	ds = diff --stat
+	untracked = !git ls-files --others
+	exuntracked = !git ls-files --others --exclude-standard
 
 	hi = "!f() { echo 'Hello, ' $1; }; f"
 	share = "!commitAndPushAlias() { cd c:\\\\gtl\\\\alias4git; git add alias.gitconfig; git commit; }; commitAndPushAlias"
