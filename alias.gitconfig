@@ -39,8 +39,7 @@
 	exuntracked = !git ls-files --others --exclude-standard
 
 	hi = "!f() { echo 'Hello, ' $1; }; f"
-	share = "!commitAndPushAlias() { cd c:\\\\gtl\\\\alias4git; git add alias.gitconfig; git commit; }; commitAndPushAlias"
-
+	
 	# from https://github.com/Lior-Katz
 	nccommit = commit --allow-empty-message -m \"\"
 	gcl = config --global -l
