@@ -51,6 +51,9 @@
 	unstage = restore --staged
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	
+[color.decorate]
+	branch = 41
+	HEAD = "#00ffff" bold 
 [gitflow "branch"]
 	master = main
 	develop = develop
