@@ -1,5 +1,5 @@
 [alias]
-	st = status
+	st = status -s -b
 	cm = commit -m
 	co = checkout
 	br = branch --sort=-committerdate
@@ -26,25 +26,41 @@
 	
 
 	compare = rev-list --count --left-right
-	cmdlist = !git cfg -l | grep 'alias'
-	list = !git cfg -l | grep 'alias'
-	cfglist = !git cfg -l | grep 'alias'
+	cmdlist = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	list = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	cfglist = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	
 	
 	ts = !ls -ll .git/FETCH_HEAD
 	synced = !ls -ll .git/FETCH_HEAD
 	lol = log --oneline --graph --decorate
+        lastpull = !ls -ll .git/FETCH_HEAD
+	all = add .
+	ds = diff --stat
+	untracked = !git ls-files --others
+	exuntracked = !git ls-files --others --exclude-standard
+
+	hi = "!f() { echo 'Hello, ' $1; }; f"
+	
+	# from https://github.com/Lior-Katz
+	nccommit = commit --allow-empty-message -m \"\"
+	gcl = config --global -l
+	last = log -1 HEAD --stat
+	vimdiff = difftool -t vimdiff -y
+	diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
+	unstage = restore --staged
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
 	
 [gitflow "branch"]
 	master = main
 	develop = develop
 
 [gitflow "prefix"]
-	feature = feature/
-	bugfix = bugfix/
-	release = release/
-	hotfix = hotfix/
-	support = support/
+	feature = feature-
+	bugfix = bugfix-
+	release = release-
+	hotfix = hotfix-
+	support = support-
 	versiontag = 
 
 [gitflow "path"]
