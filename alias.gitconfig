@@ -33,8 +33,11 @@
 	
 	ts = !ls -ll .git/FETCH_HEAD
 	synced = !ls -ll .git/FETCH_HEAD
+
 	lol = log --oneline --graph --decorate
-        lastpull = !ls -ll .git/FETCH_HEAD
+        rlog = reflog --date=iso
+	dif = diff --word-diff
+	lastpull = !ls -ll .git/FETCH_HEAD
 	all = add .
 	ds = diff --stat
 	untracked = !git ls-files --others
@@ -54,6 +57,11 @@
 [color.decorate]
 	branch = 41
 	HEAD = "#00ffff" bold 
+
+[grep]
+	lineNumber = true
+	patternType = perl
+
 [gitflow "branch"]
 	master = main
 	develop = develop
