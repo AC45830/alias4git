@@ -33,7 +33,7 @@
    ```
 4. Add new alias using command -
 	```
-	git cfg --add alias.st "status"
+	git cfg alias.st "status"
 	```
 	instead of 
 	```

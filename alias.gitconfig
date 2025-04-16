@@ -33,6 +33,7 @@
 	
 	ts = !ls -ll .git/FETCH_HEAD
 	synced = !ls -ll .git/FETCH_HEAD
+	lol = log --oneline --graph --decorate
 	
 [gitflow "branch"]
 	master = main
