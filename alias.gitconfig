@@ -4,7 +4,7 @@
 	co = checkout
 	br = branch --sort=-committerdate
 	ac = commit -am
-	sync = "pull --rebase origin "
+	sync = pull --rebase origin
 	nbr = git co -b
 	
 	cln = clean -fd
