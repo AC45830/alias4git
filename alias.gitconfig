@@ -4,7 +4,7 @@
 	co = checkout
 	br = branch --sort=-committerdate
 	ac = commit -am
-	sync = !git co develop && git pull && git co -
+	sync = "pull --rebase origin "
 	nbr = git co -b
 	
 	cln = clean -fd
@@ -53,6 +53,9 @@
 	diff-words = diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'
 	unstage = restore --staged
 	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+	stat = dif --stat
+	difff = dif --name-only
+	stage = add --all
 	
 [color.decorate]
 	branch = 41
