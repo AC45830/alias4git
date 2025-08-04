@@ -56,6 +56,8 @@
 	stat = dif --stat
 	difff = dif --name-only
 	stage = add --all
+	mkl = !git
+	vcvars = !\"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Professional\\\\VC\\\\Auxiliary\\\\Build\\\\vcvars64.bat\"
 	
 [color.decorate]
 	branch = 41
