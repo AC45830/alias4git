@@ -57,8 +57,9 @@
 	difff = dif --name-only
 	stage = add --all
 	mkl = !git
-	vcvars = !\"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\2022\\\\Professional\\\\VC\\\\Auxiliary\\\\Build\\\\vcvars64.bat\"
+	vc = !cmd /C \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\VC\\Auxiliary\\Build\\vcvars64.bat\"
 	cat = cat-file -p
+	rt = "!f() { git cfg alias.$1; }; f"
 	
 [color.decorate]
 	branch = 41
