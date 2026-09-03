@@ -62,6 +62,9 @@
 	rt = "!f() { git cfg alias.$1; }; f"
 	sco = sparse-checkout set
 	cs = "!f() { git difff $1..$1~1; }; f"
+	ccd = !cd |clip
+	vci = !echo \"\"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Insiders\\\\VC\\\\Auxiliary\\\\Build\\\\vcvars64.bat\"\"
+	vc18 = !echo \"\"C:\\\\Program Files\\\\Microsoft Visual Studio\\\\18\\\\Professional\\\\VC\\\\Auxiliary\\\\Build\\\\vcvars64.bat\"\"
 	
 [color.decorate]
 	branch = 41
